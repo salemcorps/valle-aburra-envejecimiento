@@ -1,0 +1,10 @@
+# Credenciales
+.env
+
+# Datos originales del DANE (se descargan desde la fuente)
+data/raw/*
+!data/raw/.gitkeep
+
+# Jupyter y Python
+.ipynb_checkpoints/
+__pycache__/
