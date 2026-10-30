@@ -34,12 +34,15 @@ Análisis de las proyecciones oficiales de población del DANE para la región d
 Tres páginas en Power BI, con una estética retro de Windows 95 (tema propio en `dashboard/windows96_theme.json`). Versión navegable: [`dashboard/dashboard_valle_aburra.pdf`](dashboard/dashboard_valle_aburra.pdf).
 
 **1. Panorama poblacional:** población total 2018-2050, hitos (pico en 2037, cruce en 2031) e indicadores del año seleccionado.
+
 ![Panorama poblacional](dashboard/img/pbi_1_panorama.png)
 
 **2. Pirámide poblacional:** pirámide por sexo y grupo de edad, con selector de año.
+
 ![Pirámide poblacional](dashboard/img/pbi_2_piramide.png)
 
 **3. Dependencia y envejecimiento:** índice de envejecimiento y razón de dependencia juvenil frente a la de vejez.
+
 ![Dependencia y envejecimiento](dashboard/img/pbi_3_dependencia.png)
 
 Para abrir el `.pbix` necesitas Power BI Desktop (solo Windows). Los datos están importados dentro del archivo, así que puedes explorarlo sin tener MySQL; para actualizarlo desde la base debes instalar MySQL Connector/NET y tener la base `vda_envejecimiento` cargada (ver "Cómo reproducirlo").
@@ -73,7 +76,7 @@ Requiere **MySQL 8.0 o superior** (CTEs y funciones de ventana). Probado en MySQ
 3. **Validación:** la suma de edades coincide con el total oficial del DANE en las 89 combinaciones año/área.
 4. **Indicadores:** grupos de edad, índice de envejecimiento, razones de dependencia, edad mediana (interpolada) y razón de feminidad.
 5. **Carga a MySQL** con SQLAlchemy y análisis con SQL.
-6. **Visualización** en Power BI / Tableau, conectando a los CSV o directo a MySQL.
+6. **Visualización** en Power BI, conectado a MySQL (también puede usarse con los CSV de `data/`).
 
 ## Limitaciones
 - **Es una proyección, no una observación.** Depende de supuestos de fecundidad, mortalidad y migración del DANE; la incertidumbre crece con el horizonte.
@@ -83,3 +86,13 @@ Requiere **MySQL 8.0 o superior** (CTEs y funciones de ventana). Probado en MySQ
 
 ## Fuentes
 - DANE, *Proyecciones de población y estudios demográficos (PPED)*, actualización del 30 de julio de 2025.
+
+---
+
+## Autor y contacto
+
+**Juan Andrés Valdés** · Data Analyst
+
+- LinkedIn: [juan-valdes-data](https://www.linkedin.com/in/juan-valdes-data/)
+
+¿Comentarios o sugerencias sobre el proyecto? Escríbeme.
